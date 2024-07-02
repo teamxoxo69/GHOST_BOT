@@ -17,7 +17,7 @@ module.exports.config = {
 module.exports.languages = {
   en: {
     moduleInfo:
-      "「 %1 」\n%2\n\n❯ usage : %3\n❯ category : %4\n❯ waiting time : %5 seconds(s)\n❯ permission : %6\n\n» module code by EMon-BHai",
+      "「 %1 」\n%2\n\n❯ usage : %3\n❯ category : %4\n❯ waiting time : %5 seconds(s)\n❯ permission : %6\n\n» module code by ghost ",
     helpList:
       `➤ there are %1 commands & %2 categories\n\n╭ ───«~»─── ╮
 │          GUIDE         │
