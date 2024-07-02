@@ -40,7 +40,7 @@ Relationship : SINGLE 😓
 
 Work : JOB IN UNGANDA 
 
-FACEBOOK LINK : https://www.facebook.com/EMon.BHai.FACEBOOK
+FACEBOOK LINK : https://www.facebook.com/ghostcipher0
 
 Wp : wa.me/+8801321064721
 
