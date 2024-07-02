@@ -1,21 +1,21 @@
 {
-  "author": "Emon",
+  "author": "RAIHAN",
   "developermode": false,
   "language": "en",
   "notification": true,
   "approval": false,
-  "OPERATORNAME": "EMON HAWLADAR",
-  "OPERATORID": "100075290587473",
-  "OPERATORLINK": "https://www.facebook.com/EMon.BHai.FACEBOOK",
-  "BOTNAME": "EMon-BHai-BOT",
+  "OPERATORNAME": "RAIHAN HOSSAIN",
+  "OPERATORID": "100074741207913",
+  "OPERATORLINK": "https://www.facebook.com/ghostcipher0",
+  "BOTNAME": "GHOST-CIPHER-BOT",
   "PREFIX": "+",
   "OPERATOR": [
-    "100075290587473"
+    "100074741207913"
   ],
   "ADMINBOT": [
-    "100075290587473"
+    "100074741207913"
   ],
-  "OWNER": ["100075290587473"],
+  "OWNER": ["100074741207913"],
   "APPROVED": [],
   "disabledcmds": [],
   "disabledevents": [],
