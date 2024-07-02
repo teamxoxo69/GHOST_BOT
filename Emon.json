@@ -7,17 +7,17 @@
   "OPERATORNAME": "EMON HAWLADAR",
   "OPERATORID": "100075290587473",
   "OPERATORLINK": "https://www.facebook.com/EMon.BHai.FACEBOOK",
-  "BOTNAME": "EMon-BHai-BOT",
+  "BOTNAME": "GHOST-CIPHER-BOT",
   "PREFIX": "+",
   "OPERATOR": [
     "100075290587473"
   ],
   "ADMINBOT": [
-    "100075290587473",
+    "100074741207913",
     "uid",
     "uid"
   ],
-  "OWNER": ["100075290587473"],
+  "OWNER": ["100074741207913"],
   "APPROVED": [],
   "disabledcmds": [],
   "disabledevents": [],
