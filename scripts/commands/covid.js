@@ -21,7 +21,7 @@ module.exports.run = async (
   const request = require('request');
   const fs = require("fs");
   var tip = args.join(" ");
-  if (!tip) return api.sendMessage(`───※ ·❆· ※───\n\nএকটি দেশের নাম লিখুন !🌎\n\n───※ ·❆· ※───\n🔰𝙀𝙈𝙤𝙣-𝘽𝙃𝙖𝙞🔰`, event.threadID, event.messageID);
+  if (!tip) return api.sendMessage(`───※ ·❆· ※───\n\nএকটি দেশের নাম লিখুন !🌎\n\n───※ ·❆· ※───\n🔰GHOST CIPHER🔰`, event.threadID, event.messageID);
   else
   {
     axios.get(`https://disease.sh/v3/covid-19/countries/${encodeURIComponent(tip)}`).then(res =>
