@@ -30,7 +30,7 @@ module.exports.run = async function({ api, event, args }) {
     allimage.push(fs.createReadStream(__dirname + "/cache/img1.mp4"));
 
     {
-        msg += `°\n\n__${cp}\n\n✨🌺${emon}..!🍂`
+        msg += `°\n\n__${cp}\n\n✨🌺GHOST CIPHER.!🍂`
 
     }
 
