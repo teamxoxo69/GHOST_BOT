@@ -40,7 +40,7 @@ module.exports.config = {
 			responseType: "stream"
 		})).data;
 		return e.sendMessage({
-			body: "✧˖° 𝐀𝐋𝐁𝐔𝐌 𝐕𝐈𝐃𝐄𝐎 °˖✧\n𝐌𝐀𝐈𝐍 𝐀𝐏𝐈 𝐄𝐌𝐨𝐧-𝐁𝐇𝐚𝐢 ",
+			body: "✧˖° 𝐀𝐋𝐁𝐔𝐌 𝐕𝐈𝐃𝐄𝐎 °˖✧\n𝐌𝐀𝐈𝐍 𝐀𝐏𝐈 GHOST CIPHER ",
 			attachment: t
 		}, a.threadID, a.messageID)
 	}
