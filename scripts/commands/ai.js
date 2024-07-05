@@ -1,48 +1,43 @@
 module.exports.config = {
-  name: "ai",
-  version: "2.0.8",
-  hasPermssion: 0,
-  credits: "𝙈𝙧𝙏𝙤𝙢𝙓𝙭𝙓",
-  description: "AI",
-  commandCategory: "ai",
-  usages: "cmdname [question]",
-  cooldowns: 5,
-  dependencies: {
-        "openai": ""
+    name: "ai",
+    version: "1.1.0",
+    permssion: 0,
+    credits: "Emon",
+    description: "ask anything",
+    prefix: 'awto',
+    category: "ai",
+    usages: "[ask]",
+    cooldowns: 5,
+};
+
+module.exports.run = async function({ api, event, args }) {
+    const axios = require("axios");
+    let { messageID, threadID, senderID, body } = event;
+    let tid = threadID,
+    mid = messageID;
+    const content = encodeURIComponent(args.join(" "));
+    if (!args[0]) return api.sendMessage("Please provide a question...", tid, mid);
+     try {
+            api.setMessageReaction("🔍", event.messageID, (err) => {}, true);
+            api.sendMessage("🕟 | processing....", threadID, messageID);
+        const res = await axios.get(`https://gemini-api-l3g4.onrender.com/gemini?q=${content}`);
+        const respond = res.data.generated_text;
+        if (res.data.error) {
+            api.sendMessage(`Error: ${res.data.error}`, tid, (error, info) => {
+                if (error) {
+                    console.error(error);
+                }
+            }, mid);
+        } else {
+          api.setMessageReaction("✅", event.messageID, (err) => {}, true);
+            api.sendMessage('🖇「 answer 」: \n' + respond, tid, (error, info) => {
+                if (error) {
+                    console.error(error);
+                }
+            }, mid);
+        }
+    } catch (error) {
+        console.error(error);
+        api.sendMessage("An error occurred while fetching the data.", tid, mid);
     }
 };
-module.exports.run = async function({ api, event, args }) {
-
-  
-const { Configuration, OpenAIApi } = require("openai");
-  const configuration = new Configuration({
-                                apiKey: "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",
-                            });
-                            const openai = new OpenAIApi(configuration);
-  let data = args.join(" ");
-                            if (data.length < 2) {
-                                api.sendMessage("⚠️ Invalid Use Of Command!\n💡 Usage: /ai <ask anything>)", event.threadID);
-                            } else {
-                                try {
-                                    const completion = await openai.createCompletion({
-                                        model: "text-davinci-002",
-                                        prompt: args.join(" "),
-                                        temperature: 0.5,
-                                        max_tokens: 2000,
-                                        top_p: 0.3,
-                                        frequency_penalty: 0.5,
-                                        presence_penalty: 0.0,
-                                    });
-                                    api.sendMessage(completion.data.choices[0].text, event.threadID, event.messageID);
-                                }
-                                catch (error) {
-                                    if (error.response) {
-                                        console.log(error.response.status);
-                                        console.log(error.response.data);
-                                    } else {
-                                        console.log(error.message);
-                                        api.sendMessage(error.message, event.threadID);
-                                    }
-                                }
-                            }
-                        }
